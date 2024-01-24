@@ -13,7 +13,7 @@ function App() {
     const sendMessage = () => {
         if (isValidPhoneNumber(phoneNumber)){
             let cleanedNumber = phoneNumber.substring(2, 10)
-            const whatsappUrl = `https://api.whatsapp.com/send/?phone=%2B9725${cleanedNumber}&text&app_absent=0`;
+            const whatsappUrl = `whatsapp://send/?phone=%2B9725${cleanedNumber}&text&app_absent=0`;
             window.open(whatsappUrl, '_blank');
         } else{
             alert("Incorrect phone number, check your input");
